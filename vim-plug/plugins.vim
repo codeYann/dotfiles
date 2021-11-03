@@ -8,6 +8,12 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'mhinz/vim-startify'
+Plug 'shaunsingh/nord.nvim'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'Rigellute/rigel'
+Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Git integration
 Plug 'mhinz/vim-signify'
@@ -18,6 +24,7 @@ Plug 'preservim/nerdcommenter'
 " Completions plugins and intellisense
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 " Fuzzy
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
