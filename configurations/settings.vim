@@ -5,7 +5,7 @@ syntax on
 set termguicolors
 set t_Co=256
 set cursorline
-colorscheme PaperColor
+colorscheme ayu
 set background=dark
 
 " Essential settings
