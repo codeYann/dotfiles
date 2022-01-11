@@ -61,3 +61,6 @@ luac.out
 
 # packer_compiled 
 packer_compiled.lua
+
+# kitty-search
+kitty/kitty_search
