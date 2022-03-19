@@ -65,7 +65,7 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "gruvbox-flat",
+		theme = "nord",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "Aplha", "dashboard", "NvimTree", "Outline" },
