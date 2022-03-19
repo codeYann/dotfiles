@@ -12,14 +12,12 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.deno_fmt,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-		formatting.cmake_format,
 		formatting.gofmt,
-		formatting.goimports,
 		formatting.rustfmt,
-		formatting.brittany,
+		formatting.clang_format,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
