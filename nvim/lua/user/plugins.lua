@@ -44,42 +44,38 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" }) -- Markdown plugin
 
-	-- Theme area
-	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
-	use("lunarvim/darkplus.nvim")
-	use("projekt0n/github-nvim-theme")
-	use("Mofiqul/vscode.nvim")
-	use("Mofiqul/dracula.nvim")
-	use("eddyekofo94/gruvbox-flat.nvim")
+	-- Themes
+	use("EdenEast/nightfox.nvim")
+	use("shaunsingh/nord.nvim")
+
+	-- Telescope
+	use("nvim-telescope/telescope.nvim")
+
 	-- Completions
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
 	use("hrsh7th/cmp-path") -- path completions
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
-	use("kdheepak/cmp-latex-symbols")
 	use("hrsh7th/cmp-nvim-lsp")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
+	-- Autopairs
+	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
+
 	-- LPS config
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
-
-	-- Telescope
-	use("nvim-telescope/telescope.nvim")
 
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
-	-- Autopairs
-	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 
 	-- Commenter
 	use("numToStr/Comment.nvim")
@@ -87,16 +83,16 @@ return packer.startup(function(use)
 	-- Git integration
 	use("lewis6991/gitsigns.nvim")
 
-	-- Nvim-tree
-	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
-
 	-- Bufferlines
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
-	-- null-ls
-	use("jose-elias-alvarez/null-ls.nvim")
+	-- Nvim-tree
+	use("kyazdani42/nvim-web-devicons")
+	use("kyazdani42/nvim-tree.lua")
+
+	-- Colorize
+	use("norcalli/nvim-colorizer.lua")
 
 	-- LuaLine
 	use("nvim-lualine/lualine.nvim")
@@ -115,16 +111,12 @@ return packer.startup(function(use)
 
 	-- Alpha
 	use("goolord/alpha-nvim")
-	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
-
-	-- Colorize
-	use("norcalli/nvim-colorizer.lua")
 
 	-- Rust-tools
 	use("simrat39/rust-tools.nvim")
 
-	-- Transparent nvim
-	use("xiyaowong/nvim-transparent")
+	-- null-ls
+	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
