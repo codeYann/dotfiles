@@ -38,3 +38,7 @@ luac.out
 *.i*86
 *.x86_64
 *.hex
+
+# packer dependencies
+plugin/packer_compiled.lua
+
