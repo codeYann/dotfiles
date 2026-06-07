@@ -1,0 +1,16 @@
+# Swap files
+*.swp
+*.swo
+
+# Backup files
+*.bak
+
+# Logs
+*.log
+
+# env
+.env
+.env.*
+secrets.*
+*.pem
+*.key
