@@ -3,30 +3,41 @@ require "nvchad.options"
 local options = {
   number = true,
   relativenumber = true,
-  mouse = "a",
-  ignorecase = true,
-  smartcase = true,
-  hlsearch = true,
-  incsearch = true,
-  expandtab = true,
   shiftwidth = 2,
   tabstop = 2,
   softtabstop = 2,
-  smartindent = true,
   wrap = false,
   scrolloff = 8,
   sidescrolloff = 8,
-  clipboard = "unnamedplus",
   updatetime = 250,
   timeoutlen = 400,
   cursorline = true,
   signcolumn = "yes",
   swapfile = false,
   backup = false,
-  undofile = true,
-  termguicolors = true,
 }
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
+vim.diagnostic.config {
+  float = {
+    border = "rounded",
+    source = "if_many",
+    focusable = false,
+  },
+  jump = {
+    wrap = true,
+  },
+  severity_sort = true,
+  signs = {
+    text = { "󰅙", "", "󰋼", "󰌵" },
+  },
+  underline = true,
+  update_in_insert = false,
+  virtual_lines = false,
+  virtual_text = {
+    prefix = "",
+  },
+}

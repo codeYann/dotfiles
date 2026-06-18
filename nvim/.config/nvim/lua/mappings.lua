@@ -13,4 +13,7 @@ map("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { silent = true })
 map("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { silent = true })
 map("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { silent = true })
 
+-- Code actions
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
