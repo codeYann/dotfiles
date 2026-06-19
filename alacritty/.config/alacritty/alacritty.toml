@@ -1,0 +1,38 @@
+# 🎨 Theme
+[general]
+live_config_reload = true
+import = ["~/.config/alacritty/themes/kanagawa-lotus.toml"]
+
+# 🪟 Window
+[window]
+dynamic_title = true
+padding = { x = 10, y = 8 }
+decorations = "Full"
+
+# 🔤 Font
+[font]
+builtin_box_drawing = true
+size = 13
+
+[font.normal]
+family = "ZedMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+style = "Bold"
+
+[font.italic]
+style = "Italic"
+
+# 📜 Scrolling
+[scrolling]
+history = 10000
+multiplier = 3
+
+# 🐚 Shell
+[terminal.shell]
+program = "/bin/zsh"
+
+# 🌿 Environment
+[env]
+TERM = "alacritty"
