@@ -6,13 +6,17 @@
 local M = {}
 
 M.base46 = {
-  theme = "gruvbox",
+  theme = "gruvbox_light",
   transparency = true,
   hl_override = {
     LineNr = { fg = "#7c6f64" },
-    CursorLineNr = { fg = "#fe8019", bold = true },
+    CursorLineNr = { fg = "#af3a03", bold = true },
     Comment = { italic = true },
     ["@comment"] = { italic = true },
+    NonText = {
+      fg = "#af3a03",
+      bold = true,
+    },
   },
 }
 

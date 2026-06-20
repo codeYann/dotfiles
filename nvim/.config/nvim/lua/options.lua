@@ -15,6 +15,9 @@ local options = {
   signcolumn = "yes",
   swapfile = false,
   backup = false,
+  fillchars = {
+    eob = "~",
+  },
 }
 
 for k, v in pairs(options) do
