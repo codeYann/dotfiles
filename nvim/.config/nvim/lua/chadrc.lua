@@ -6,15 +6,15 @@
 local M = {}
 
 M.base46 = {
-  theme = "gruvbox_light",
+  ---@diagnostic disable-next-line: assign-type-mismatch
+  theme = "monokai",
   transparency = true,
   hl_override = {
-    LineNr = { fg = "#7c6f64" },
-    CursorLineNr = { fg = "#af3a03", bold = true },
+    CursorLineNr = { fg = "#ffffff", bold = true },
     Comment = { italic = true },
     ["@comment"] = { italic = true },
     NonText = {
-      fg = "#af3a03",
+      fg = "#ffffff",
       bold = true,
     },
   },
