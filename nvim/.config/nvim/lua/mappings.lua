@@ -1,4 +1,3 @@
-local gitsigns = require "gitsigns"
 require "nvchad.mappings"
 
 local map = vim.keymap.set
@@ -17,10 +16,10 @@ map("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { silent = true })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "code actions" })
 
 -- Git
-vim.keymap.set("n", "<leader>gb", gitsigns.toggle_current_line_blame, {
+vim.keymap.set("n", "<leader>gb", require("gitsigns").toggle_current_line_blame, {
   desc = "toggle current line blame",
 })
 
-vim.keymap.set("n", "<leader>gd", gitsigns.diffthis, {
+vim.keymap.set("n", "<leader>gd", require("gitsigns").diffthis, {
   desc = "diff against HEAD",
 })

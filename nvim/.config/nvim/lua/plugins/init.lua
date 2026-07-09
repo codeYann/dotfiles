@@ -13,10 +13,11 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     opts = function(_, opts)
-      opts.scope = {
+      local options = opts or {}
+      options.scope = {
         enabled = false,
       }
-      return opts
+      return options
     end,
   },
   {
@@ -48,18 +49,20 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     opts = function(_, opts)
-      opts.current_line_blame = true
+      local options = opts or {}
 
-      opts.current_line_blame_opts = {
+      options.current_line_blame = true
+
+      options.current_line_blame_opts = {
         delay = 100,
         virt_text = true,
         virt_text_pos = "eol",
         ignore_whitespace = true,
       }
 
-      opts.current_line_blame_formatter = "󰜘 <author>, <author_time:%R> • <summary>"
+      options.current_line_blame_formatter = "󰜘 <author>, <author_time:%R> • <summary>"
 
-      return opts
+      return options
     end,
   },
 }

@@ -106,8 +106,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.api.nvim_create_autocmd("LspDetach", {
         group = highlight_augroup,
         buffer = bufnr,
-        callback = function()
+        callback = function(detach_args)
           vim.lsp.buf.clear_references()
+
+          local detaching_id = detach_args.data and detach_args.data.client_id
+
+          for _, c in ipairs(vim.lsp.get_clients { bufnr = bufnr }) do
+            if c.id ~= detaching_id and c.server_capabilities.documentHighlightProvider then
+              return
+            end
+          end
+
           vim.api.nvim_clear_autocmds {
             group = highlight_augroup,
             buffer = bufnr,
