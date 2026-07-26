@@ -17,7 +17,15 @@ local options = {
   backup = false,
   fillchars = {
     eob = "~",
+    fold = " ",
+    foldopen = "",
+    foldsep = " ",
+    foldclose = "",
   },
+  foldcolumn = "0",
+  foldlevel = 99,
+  foldlevelstart = 99,
+  foldenable = true,
 }
 
 for k, v in pairs(options) do
