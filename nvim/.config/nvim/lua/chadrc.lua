@@ -7,7 +7,7 @@ local M = {}
 
 M.base46 = {
   ---@diagnostic disable-next-line: assign-type-mismatch
-  theme = "melange",
+  theme = "catppuccin",
   transparency = true,
   hl_override = {
     CursorLineNr = { fg = "#ffffff", bold = true },
