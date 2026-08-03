@@ -18,13 +18,7 @@ return {
             return false
           end
 
-          if
-            not is_valid_buf
-            or not is_valid_win
-            or vim.fn.win_gettype(win) ~= ""
-            or vim.wo[win].winbar ~= ""
-            or vim.bo[buf].ft == "help"
-          then
+          if vim.fn.win_gettype(win) ~= "" or vim.wo[win].winbar ~= "" or vim.bo[buf].ft == "help" then
             return false
           end
 
