@@ -17,6 +17,7 @@ local options = {
     html = { "prettierd", "prettier", stop_after_first = true },
     c = { "clang-format" },
     cpp = { "clang-format" },
+    python = { "ruff", "isort" },
   },
 
   notify_on_error = true,
