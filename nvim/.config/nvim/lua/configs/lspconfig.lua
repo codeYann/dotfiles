@@ -3,7 +3,8 @@ require("nvchad.configs.lspconfig").defaults()
 local nvlsp = require "nvchad.configs.lspconfig"
 local markers = require "utils.markers"
 
-local servers = { "html", "cssls", "ts_ls", "gopls", "bashls", "tailwindcss", "astro", "clangd" }
+local servers =
+  { "html", "cssls", "ts_ls", "gopls", "bashls", "tailwindcss", "astro", "clangd", "basedpyright", "ruff" }
 
 vim.lsp.config("biome", {
   on_attach = nvlsp.on_attach,
