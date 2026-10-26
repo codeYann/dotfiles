@@ -41,3 +41,4 @@ vim.fn.sign_define("DapBreakpointRejected", {
 require "configs.dap.go"
 require "configs.dap.node"
 require "configs.dap.cpp"
+require "configs.dap.python"
